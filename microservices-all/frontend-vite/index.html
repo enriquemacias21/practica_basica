@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIGA - Frontend</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5" id="login-container">
+    <h3 class="text-center mb-4">Login SIGA</h3>
+    <div class="card p-4 mx-auto" style="max-width: 400px;">
+      <form id="login-form">
+        <div class="mb-3">
+          <label for="usuario" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="usuario" required>
+        </div>
+        <div class="mb-3">
+          <label for="clave" class="form-label">Clave</label>
+          <input type="password" class="form-control" id="clave" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container mt-4" id="menu-container" style="display: none;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SIGA</a>
+        <div class="navbar-nav">
+          <a class="nav-link" href="#" onclick="mostrarSeccion('estudiantes')">Estudiantes</a>
+          <a class="nav-link" href="#" onclick="mostrarSeccion('docentes')">Docentes</a>
+          <a class="nav-link" href="#" onclick="mostrarSeccion('matriculas')">Matrículas</a>
+          <a class="nav-link" href="#" onclick="mostrarSeccion('notas')">Notas</a>
+          <a class="nav-link text-danger" href="#" onclick="cerrarSesion()">Salir</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="formulario" class="mb-3"></div>
+
+    <table class="table" id="tabla">
+      <thead><tr><th>Campo 1</th><th>Campo 2</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
